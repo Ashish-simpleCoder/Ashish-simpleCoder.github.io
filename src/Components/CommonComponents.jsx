@@ -11,7 +11,7 @@ export default function CommonComponents(props) {
                     {props.h2_2}
                 </h2>
 
-                <NavLink to={props.visit}>{props.a}</NavLink>
+                <NavLink to={props.visit} className='home-btn'>{props.a}</NavLink>
             </div>
             <div className="image about">
                 <img src={props.img} alt="svg" />

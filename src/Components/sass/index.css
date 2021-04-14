@@ -9,6 +9,12 @@
 body {
   -webkit-animation: animateBody 1s ease forwards;
           animation: animateBody 1s ease forwards;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.body-active {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .home-page {
@@ -70,7 +76,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 90vw;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 0 auto;
   height: 8vh;
   border-bottom: 1px solid rgba(102, 7, 165, 0.5);
 }
@@ -143,7 +149,6 @@ main {
 }
 
 .home-page {
-  /* border: 1px solid red; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,7 +156,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-height: 90vh;
+  min-height: 80vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -187,6 +192,10 @@ main {
   color: #6607a5;
 }
 
+.home-page .title .a-active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
 .home-page .title a:hover {
   background: #6607a5;
   color: white;
@@ -196,12 +205,11 @@ main {
 .home-page .image {
   width: 50%;
   height: 100%;
-  text-align: right;
+  text-align: center;
 }
 
 /* image section */
 .image img {
-  height: 40rem;
   /* animation: up-down 2s ease-in-out infinite alternate; */
 }
 
@@ -235,21 +243,24 @@ main {
   }
 }
 
-/* media for .home-page section */
+/* media query for .home-page section */
 @media screen and (max-width: 650px) {
+  body {
+    overflow-x: hidden;
+  }
   header {
     position: relative;
     height: 10vh;
   }
   header nav {
-    height: 90vh;
+    height: 100vh;
     width: 50%;
     position: fixed;
-    bottom: 0;
+    top: 0vh;
     right: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-    opacity: 1;
+    opacity: 0;
     -webkit-transition: all 0.7s linear;
     transition: all 0.7s linear;
     -webkit-box-pack: space-evenly;
@@ -268,6 +279,7 @@ main {
   header .active {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
+    opacity: 1;
   }
   @-webkit-keyframes linkAnimate {
     from {
@@ -302,6 +314,7 @@ main {
     cursor: pointer;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    z-index: 1000;
   }
   header .hamburger .lines {
     width: 3rem;
@@ -336,12 +349,15 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .home-page .title {
     text-align: center;
     margin-top: 3rem;
   }
-  .home-page .titlea {
+  .home-page .title a {
     padding: 5px 1rem;
   }
 }
@@ -402,8 +418,21 @@ main {
 
 /* -------------------about page styling----------------------- */
 /* svg image styling */
+.about {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .about img {
-  height: 30rem;
+  height: 20rem;
   -webkit-animation: up-down 2s ease-in-out infinite alternate;
           animation: up-down 2s ease-in-out infinite alternate;
 }
@@ -510,5 +539,16 @@ form button:hover {
 
 form .text {
   height: 10rem;
+}
+
+footer {
+  width: 90vw;
+  text-align: center;
+  font-size: clamp(2rem, 2.5rem, 3vw);
+  margin: 0 auto 1rem auto;
+}
+
+footer span {
+  color: #6607a5;
 }
 /*# sourceMappingURL=index.css.map */

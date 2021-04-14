@@ -5,6 +5,7 @@ import About from './About';
 import Contact from './Contact';
 import Service from './Service';
 import NavLinks from './NavLinks';
+import Footer from './Footer';
 
 export default function App() {
     return (
@@ -27,6 +28,7 @@ export default function App() {
                     <Redirect to="/" />
                 </Switch>
             </main>
+            <Footer />
         </>
     );
 }
