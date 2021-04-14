@@ -97,6 +97,7 @@ a.active {
 main {
     width: 90vw;
     margin: 0 auto;
+    overflow: hidden;
 }
 .home-page {
     /* border: 1px solid red; */
@@ -142,6 +143,7 @@ main {
 /* image section */
 .image img {
     height: 40rem;
+    // width: 10rem;
     /* animation: up-down 2s ease-in-out infinite alternate; */
 }
 @keyframes up-down {
@@ -154,8 +156,11 @@ main {
         filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.7));
     }
 }
-/* media for .home-page section */
+/* media query for .home-page section */
 @media screen and (max-width: 650px) {
+    body{
+        overflow-x: hidden;
+    }
     header {
         position: relative;
         height: 10vh;
@@ -166,6 +171,8 @@ main {
             top: 10vh;
             right: 0;
             transform: translateX(100%);
+            // overflow: hidden;
+            // visibility: hidden;
             opacity: 1;
             transition: all 0.7s linear;
             justify-content: space-evenly;
@@ -227,10 +234,11 @@ main {
     .home-page {
         flex-direction: column-reverse;
         justify-content: center;
+        align-items: center;
         & .title {
             text-align: center;
             margin-top: 3rem;
-            &a {
+            & a {
                 padding: 5px 1rem;
             }
         }
