@@ -15,7 +15,7 @@ function AnimateElements() {
             }s`;
         }
     });
-    document.querySelector('.home-btn').classList.toggle('a-active');
+    document.querySelector('.home-btn').classList.toggle('a-actives');
     hamburger.classList.toggle('animate');
     document.body.classList.toggle('body-active');
 }
