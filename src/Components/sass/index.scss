@@ -97,10 +97,8 @@ a.active {
 main {
     width: 90vw;
     margin: 0 auto;
-    overflow: hidden;
 }
 .home-page {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     min-height: 90vh;
@@ -158,7 +156,7 @@ main {
 }
 /* media query for .home-page section */
 @media screen and (max-width: 650px) {
-    body{
+    body {
         overflow-x: hidden;
     }
     header {
@@ -171,9 +169,7 @@ main {
             top: 10vh;
             right: 0;
             transform: translateX(100%);
-            // overflow: hidden;
-            // visibility: hidden;
-            opacity: 1;
+            opacity: 0;
             transition: all 0.7s linear;
             justify-content: space-evenly;
             flex-direction: column;
@@ -186,6 +182,7 @@ main {
         }
         .active {
             transform: translateX(0%);
+            opacity: 1;
         }
         @keyframes linkAnimate {
             from {
