@@ -159,12 +159,11 @@ main {
     header {
         position: relative;
         height: 10vh;
-
         & nav {
             height: 90vh;
             width: 50%;
             position: fixed;
-            bottom: 0;
+            top: 10vh;
             right: 0;
             transform: translateX(100%);
             opacity: 1;

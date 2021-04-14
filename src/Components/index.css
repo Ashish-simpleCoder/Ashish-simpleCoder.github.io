@@ -15,6 +15,28 @@ html {
     --title-section-h2-f-s: clamp(2rem, 2.5rem, 3vw);
     --title-section-a-f-s: clamp(1.5rem, 1.8rem, 2.2vw);
 }
+body {
+    animation: animateBody 1s ease forwards;
+}
+.home-page {
+    animation: animateBody 1s ease forwards;
+}
+form {
+    animation: animateBody 1s ease forwards;
+}
+.services {
+    animation: animateBody 1s ease forwards;
+}
+@keyframes animateBody {
+    from {
+        transform: translateY(15rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 header {
     display: flex;
     align-items: center;
@@ -145,7 +167,7 @@ main {
         width: 50%;
         /* border: 2px solid red; */
         position: fixed;
-        bottom: 0;
+        top: 10vh;
         right: 0;
         transform: translateX(100%);
         opacity: 1;
@@ -257,7 +279,7 @@ main {
 /* svg image styling */
 .about img {
     height: 30rem;
-    animation:up-down 2s ease-in-out infinite alternate;
+    animation: up-down 2s ease-in-out infinite alternate;
 }
 
 /* -----------------------------Contact page styling-------------------------------- */
@@ -334,15 +356,15 @@ form button {
     color: rgb(102, 7, 165);
     font-size: clamp(1.5rem, 2rem, 2.5vw);
     background: white;
-    border:1px solid rgb(102, 7, 165);
+    border: 1px solid rgb(102, 7, 165);
     border-radius: 1rem;
     transition: 0.2s;
-    cursor:pointer;
+    cursor: pointer;
 }
 form button:hover {
     background: rgb(102, 7, 165);
     color: white;
 }
-form .text{
+form .text {
     height: 10rem;
 }
