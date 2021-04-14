@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function CommonComponents(props) {
     return (
@@ -10,9 +11,7 @@ export default function CommonComponents(props) {
                     {props.h2_2}
                 </h2>
 
-                <a href={props.visit}>
-                    {props.a}
-                </a>
+                <NavLink to={props.visit}>{props.a}</NavLink>
             </div>
             <div className="image about">
                 <img src={props.img} alt="svg" />

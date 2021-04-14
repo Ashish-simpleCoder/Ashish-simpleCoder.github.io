@@ -12,22 +12,6 @@ export default function Home() {
                 a='Get started'
                 visit='/service'
             />
-            {/* <div className="home-page">
-                <div className="title">
-                    <h2>
-                        Make any website with
-                        <em> React.js </em>
-                        very easily.
-                    </h2>
-
-                    <a href="" className="">
-                        Get started
-                    </a>
-                </div>
-                <div className="image">
-                    <img src={web} alt="svg" />
-                </div>
-            </div> */}
         </>
     );
 }
