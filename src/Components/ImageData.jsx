@@ -27,7 +27,7 @@ export const ImageData = [
         id: 5,
         src:
             'https://image.freepik.com/free-vector/ui-ux-design-isometric-landing-page_107791-5443.jpg',
-        title: 'UI/UI Design',
+        title: 'UI/UX Design',
     },
     {
         id: 6,
