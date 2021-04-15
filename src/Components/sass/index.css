@@ -447,10 +447,14 @@ main {
 
 .about .img1 {
   height: 30rem;
+  -webkit-animation: up-down 2s ease-in-out infinite alternate;
+          animation: up-down 2s ease-in-out infinite alternate;
 }
 
 .about .img2 {
   height: 15rem;
+  -webkit-animation: up-down 2s ease-in-out infinite alternate;
+          animation: up-down 2s ease-in-out infinite alternate;
 }
 
 /* -----------------------------Contact page form styling-------------------------------- */
