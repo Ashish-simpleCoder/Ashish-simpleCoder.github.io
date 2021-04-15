@@ -11,6 +11,13 @@ body {
           animation: animateBody 1s ease forwards;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  position: relative;
+}
+
+body .overlay {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
 }
 
 .body-active {
@@ -209,10 +216,6 @@ main {
 }
 
 /* image section */
-.image img {
-  /* animation: up-down 2s ease-in-out infinite alternate; */
-}
-
 @-webkit-keyframes up-down {
   from {
     -webkit-transform: translateY(2rem);
@@ -227,7 +230,6 @@ main {
             filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.7));
   }
 }
-
 @keyframes up-down {
   from {
     -webkit-transform: translateY(2rem);
@@ -250,19 +252,18 @@ main {
   }
   header {
     position: relative;
-    height: 10vh;
   }
   header nav {
     height: 100vh;
     width: 50%;
     position: fixed;
-    top: 0vh;
+    top: 0;
     right: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     opacity: 0;
-    -webkit-transition: all 0.7s linear;
-    transition: all 0.7s linear;
+    -webkit-transition: all 0.6s linear;
+    transition: all 0.6s linear;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -273,7 +274,7 @@ main {
     background-color: white;
     z-index: 10;
   }
-  header nav a {
+  header a {
     opacity: 0;
   }
   header .active {
@@ -284,8 +285,8 @@ main {
   @-webkit-keyframes linkAnimate {
     from {
       opacity: 0;
-      -webkit-transform: translateX(10rem);
-              transform: translateX(10rem);
+      -webkit-transform: translateX(15rem);
+              transform: translateX(15rem);
     }
     to {
       opacity: 1;
@@ -296,8 +297,8 @@ main {
   @keyframes linkAnimate {
     from {
       opacity: 0;
-      -webkit-transform: translateX(10rem);
-              transform: translateX(10rem);
+      -webkit-transform: translateX(15rem);
+              transform: translateX(15rem);
     }
     to {
       opacity: 1;
@@ -433,8 +434,6 @@ main {
 
 .about img {
   height: 20rem;
-  -webkit-animation: up-down 2s ease-in-out infinite alternate;
-          animation: up-down 2s ease-in-out infinite alternate;
 }
 
 /* -----------------------------Contact page form styling-------------------------------- */
@@ -486,7 +485,7 @@ form label {
 
 form input {
   line-height: 1;
-  padding: 0 2rem 0 5%;
+  padding: 0.5rem 2rem 0.5rem 5%;
   font-size: clamp(2rem, 2.2rem, 2.7vw);
   border-radius: 1rem;
   outline: none;
@@ -498,7 +497,7 @@ form input {
   overflow: hidden;
   letter-spacing: 1px;
   outline: none;
-  border: 1px solid #6607a5;
+  border: 1px solid rgba(102, 7, 165, 0.2);
 }
 
 form input:focus {
@@ -520,8 +519,8 @@ form textarea {
 form button {
   line-height: 1;
   height: 3rem;
-  width: 25%;
-  margin: 0 auto;
+  width: 22%;
+  margin: 1.5rem auto 0 auto;
   color: #6607a5;
   font-size: clamp(1.5rem, 2rem, 2.5vw);
   background: white;

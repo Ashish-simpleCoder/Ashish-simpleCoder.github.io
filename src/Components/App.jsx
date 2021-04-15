@@ -10,6 +10,7 @@ import Footer from './Footer';
 export default function App() {
     return (
         <>
+            <div className="overlay"></div>
             <header>
                 <h1>Ashish Prajapati</h1>
                 <div className="hamburger">
@@ -17,15 +18,15 @@ export default function App() {
                     <div className="line2 lines"></div>
                     <div className="line3 lines"></div>
                 </div>
+                <NavLinks />
             </header>
             <main>
-                <NavLinks />
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/contact" component={Contact} />
                     <Route exact path="/service" component={Service} />
-                    {/* <Redirect to="/" /> */}
+                    <Redirect to="/" />
                 </Switch>
             </main>
             <Footer />

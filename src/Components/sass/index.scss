@@ -9,6 +9,14 @@ $clr-primary: rgba(102, 7, 165, 1);
 body {
     animation: animateBody 1s ease forwards;
     transition: all 0.2s linear;
+    position: relative;
+
+    & .overlay {
+        // background: rgba(0, 0, 0, 0.3);
+        min-height: 100vh;
+        width: 100%;
+        position: absolute;
+    }
 }
 .body-active {
     background: rgba(0, 0, 0, 0.3);
@@ -52,7 +60,6 @@ header {
     margin: 0 auto 0 auto;
     height: 8vh;
     border-bottom: 1px solid rgba(102, 7, 165, 0.5);
-
     & h1 {
         flex: 1;
         font-size: clamp(2.5rem, 3rem, 4vw);
@@ -148,11 +155,11 @@ main {
     text-align: center;
 }
 /* image section */
-.image img {
-    // height: 40rem;
-    // width: 10rem;
-    /* animation: up-down 2s ease-in-out infinite alternate; */
-}
+// .image img {
+//     // height: 40rem;
+//     // width: 10rem;
+//     /* animation: up-down 2s ease-in-out infinite alternate; */
+// }
 @keyframes up-down {
     from {
         transform: translateY(2rem);
@@ -170,24 +177,24 @@ main {
     }
     header {
         position: relative;
-        height: 10vh;
+        // height: 10vh;
+
         & nav {
             height: 100vh;
             width: 50%;
             position: fixed;
-            top: 0vh;
+            top: 0;
             right: 0;
             transform: translateX(100%);
             opacity: 0;
-            transition: all 0.7s linear;
+            transition: all 0.6s linear;
             justify-content: space-evenly;
             flex-direction: column;
             background-color: rgb(255, 255, 255);
             z-index: 10;
-
-            & a {
-                opacity: 0;
-            }
+        }
+        & a {
+            opacity: 0;
         }
         .active {
             transform: translateX(0%);
@@ -196,7 +203,7 @@ main {
         @keyframes linkAnimate {
             from {
                 opacity: 0;
-                transform: translateX(10rem);
+                transform: translateX(15rem);
             }
             to {
                 opacity: 1;
@@ -298,7 +305,7 @@ main {
 .about img {
     // margin: 0 auto;
     height: 20rem;
-    animation: up-down 2s ease-in-out infinite alternate;
+    // animation: up-down 2s ease-in-out infinite alternate;
 }
 
 /* -----------------------------Contact page form styling-------------------------------- */
@@ -332,7 +339,7 @@ form {
     }
     & input {
         line-height: 1;
-        padding: 0 2rem 0 5%;
+        padding: 0.5rem 2rem 0.5rem 5%;
         font-size: clamp(2rem, 2.2rem, 2.7vw);
         border-radius: 1rem;
         outline: none;
@@ -343,7 +350,7 @@ form {
         overflow: hidden;
         letter-spacing: 1px;
         outline: none;
-        border: 1px solid $clr-primary;
+        border: 1px solid rgba(102, 7, 165, 0.2);
     }
     input:focus {
         background: rgb(221, 217, 217);
@@ -362,8 +369,8 @@ form {
     & button {
         line-height: 1;
         height: 3rem;
-        width: 25%;
-        margin: 0 auto;
+        width: 22%;
+        margin: 1.5rem auto 0 auto;
         color: $clr-primary;
         font-size: clamp(1.5rem, 2rem, 2.5vw);
         background: white;
