@@ -110,20 +110,32 @@ a.active {
 main {
     width: 90vw;
     margin: 0 auto;
+    // height: auto;
+    // border: 1px solid red;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
 }
 .home-page {
+    min-height: 85vh;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    min-height: 80vh;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    // border: 1px solid blue;
     & .title {
         width: 50%;
         height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        // border: 1px solid blue;
         & h2 {
             font-size: var(--title-section-h2-f-s);
             & em {
-                color: green;
+                color: $clr-primary;
             }
         }
         & a {
@@ -147,12 +159,12 @@ main {
             border: 1px solid white;
         }
     }
-}
-
-.home-page .image {
-    width: 50%;
-    height: 100%;
-    text-align: center;
+    & .image {
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        // border: 1px solid red;
+    }
 }
 /* image section */
 // .image img {
@@ -174,6 +186,7 @@ main {
 @media screen and (max-width: 650px) {
     body {
         overflow-x: hidden;
+        // -webkit-overflow-x: none;
     }
     header {
         position: relative;
@@ -270,9 +283,8 @@ main {
         width: 100%;
     }
     & .contents {
-        height: 100vh;
         display: grid;
-        grid-template-columns: repeat(auto-fit, 300px);
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
         grid-gap: 2rem;
         align-items: center;
         justify-content: center;
@@ -302,10 +314,13 @@ main {
     align-items: center;
     justify-content: center;
 }
-.about img {
+.about .img1 {
     // margin: 0 auto;
-    height: 20rem;
+    height: 30rem;
     // animation: up-down 2s ease-in-out infinite alternate;
+}
+.about .img2{
+    height: 15rem;
 }
 
 /* -----------------------------Contact page form styling-------------------------------- */
@@ -393,7 +408,10 @@ footer {
     width: 90vw;
     text-align: center;
     font-size: clamp(2rem, 2.5rem, 3vw);
-    margin: 0 auto 1rem auto;
+    color: $clr-primary;
+    // margin: 0 auto 1rem auto;
+    // bottom: 0;
+    // position: absolute;
 
     & span {
         // font-weight: bold;

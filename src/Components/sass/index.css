@@ -156,6 +156,8 @@ main {
 }
 
 .home-page {
+  min-height: 85vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,18 +165,30 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-height: 80vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .home-page .title {
   width: 50%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .home-page .title h2 {
@@ -182,7 +196,7 @@ main {
 }
 
 .home-page .title h2 em {
-  color: green;
+  color: #6607a5;
 }
 
 .home-page .title a {
@@ -382,11 +396,10 @@ main {
 }
 
 .services .contents {
-  height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (300px)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 300px);
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -432,8 +445,12 @@ main {
           justify-content: center;
 }
 
-.about img {
-  height: 20rem;
+.about .img1 {
+  height: 30rem;
+}
+
+.about .img2 {
+  height: 15rem;
 }
 
 /* -----------------------------Contact page form styling-------------------------------- */
@@ -544,7 +561,7 @@ footer {
   width: 90vw;
   text-align: center;
   font-size: clamp(2rem, 2.5rem, 3vw);
-  margin: 0 auto 1rem auto;
+  color: #6607a5;
 }
 
 footer span {

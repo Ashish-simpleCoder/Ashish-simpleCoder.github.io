@@ -10,7 +10,6 @@ import Footer from './Footer';
 export default function App() {
     return (
         <>
-            <div className="overlay"></div>
             <header>
                 <h1>Ashish Prajapati</h1>
                 <div className="hamburger">
