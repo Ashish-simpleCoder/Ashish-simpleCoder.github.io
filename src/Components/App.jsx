@@ -1,11 +1,13 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch as Switchs, Route, Redirect } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 import Service from './Service';
 import NavLinks from './NavLinks';
 import Footer from './Footer';
+import Switch from '@material-ui/core/Switch';
+import Light from '@material-ui/icons/WbSunnySharp';
 
 export default function App() {
     return (
@@ -20,13 +22,23 @@ export default function App() {
                 <NavLinks />
             </header>
             <main>
-                <Switch>
+                <div className="toggler">
+                    <Light />
+                    <Switch
+                        value=""
+                        inputProps={{ 'aria-label': '' }}
+                        onClick={() => {
+                            document.body.classList.toggle('dark-theme');
+                        }}
+                    />
+                </div>
+                <Switchs>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/contact" component={Contact} />
                     <Route exact path="/service" component={Service} />
                     <Redirect to="/" />
-                </Switch>
+                </Switchs>
             </main>
             <Footer />
         </>
