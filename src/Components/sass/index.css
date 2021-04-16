@@ -459,6 +459,7 @@ main {
 
 .services .contents .image-house h2 {
   font-size: clamp(2rem, 2.5rem, 3vw);
+  color: var(--normal-font-clr);
 }
 
 .services .contents .image-house img {
@@ -560,7 +561,8 @@ form input {
   border: 1px solid var(--textarea-border-clr);
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
   background: var(--input-focus-bg-clr);
 }
 
