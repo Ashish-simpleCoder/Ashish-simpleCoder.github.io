@@ -23,14 +23,14 @@ export default function App() {
             </header>
             <main>
                 <div className="toggler">
-                    <Light />
                     <Switch
-                        value=""
-                        inputProps={{ 'aria-label': '' }}
+                        // value=""
+                        // inputProps={{ 'aria-label': '' }}
                         onClick={() => {
                             document.body.classList.toggle('dark-theme');
                         }}
                     />
+                    <Light />
                 </div>
                 <Switchs>
                     <Route exact path="/" component={Home} />

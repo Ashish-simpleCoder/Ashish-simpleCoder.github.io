@@ -6,7 +6,7 @@ export default function About() {
     return (
         <CommonComponents
             img2={man}
-            h2_1="Hello i am"
+            h2_1="Hello i am "
             em=" Ashish Prajapati "
             h2_2=""
             a="See my awesome work"
