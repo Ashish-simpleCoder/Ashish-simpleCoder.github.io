@@ -18,9 +18,11 @@
   --title-section-a-f-s: clamp(1.5rem, 1.8rem, 2.2vw);
   --title-sec-a-border-clr: rgb(102, 7, 165);
   --image-house-shadow: rgba(0, 0, 0, 0.3);
-  --form-border-clr: rgba(102, 7, 165, 0.4);
+  --form-border-clr: rgba(102, 7, 165, 0.2);
   --input-bg-clr: rgb(233, 233, 233);
-  --textarea-border-clr: rgba(102, 7, 165, 0.5);
+  --textarea-border-clr: rgba(102, 7, 165, 0.1);
+  --input-hover-font-clr: rgba(244, 244, 244);
+  --input-focus-bg-clr: rgba(0, 0, 0, 0.1);
   --svg-icon-clr: black;
 }
 
@@ -40,74 +42,15 @@
   --input-bg-clr: rgb(29, 26, 26);
   --input-focus-bg-clr: rgb(41, 39, 39);
   --textarea-border-clr: rgba(102, 7, 165, 0.2);
-  --btn-bg-clr: rgb(17, 17, 17);
+  --btn-bg-clr: rgb(19, 18, 18);
   --svg-icon-clr: white;
 }
 
 body {
-  -webkit-animation: animateBody 1s ease forwards;
-          animation: animateBody 1s ease forwards;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   position: relative;
-  height: 100vh;
   background: var(--body-bg-clr);
-}
-
-body .overlay {
-  min-height: 100vh;
-  width: 100%;
-  position: absolute;
-}
-
-.body-active {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.home-page {
-  -webkit-animation: animateBody 1s ease forwards;
-          animation: animateBody 1s ease forwards;
-}
-
-form {
-  -webkit-animation: animateBody 1s ease forwards;
-          animation: animateBody 1s ease forwards;
-}
-
-.services {
-  -webkit-animation: animateBody 1s ease forwards;
-          animation: animateBody 1s ease forwards;
-}
-
-footer {
-  -webkit-animation: animateBody 1s ease forwards;
-          animation: animateBody 1s ease forwards;
-}
-
-@-webkit-keyframes animateBody {
-  from {
-    -webkit-transform: translateY(15rem);
-            transform: translateY(15rem);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes animateBody {
-  from {
-    -webkit-transform: translateY(15rem);
-            transform: translateY(15rem);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 html {
@@ -287,7 +230,6 @@ main {
   text-align: center;
 }
 
-/* image section */
 @-webkit-keyframes up-down {
   from {
     -webkit-transform: translateY(2rem);
@@ -302,6 +244,7 @@ main {
             filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.7));
   }
 }
+
 @keyframes up-down {
   from {
     -webkit-transform: translateY(2rem);
@@ -528,11 +471,11 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 80vh;
+  min-height: 70vh;
   border-radius: 1rem;
   border: 1px solid var(--form-border-clr);
   overflow: hidden;
-  max-width: 60rem;
+  max-width: 50rem;
   margin: 0 auto;
   padding-top: 2rem;
 }
@@ -606,10 +549,10 @@ form button {
   height: 3rem;
   width: 22%;
   margin: 1.5rem auto 0 auto;
-  color: #6607a5;
+  color: var(--normal-font-clr);
   font-size: clamp(1.5rem, 2rem, 2.5vw);
   background: var(--btn-bg-clr);
-  border: 1px solid var(--primay-clr);
+  border: 1px solid var(--textarea-border-clr);
   border-radius: 1rem;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -618,7 +561,7 @@ form button {
 
 form button:hover {
   background: var(--primay-clr);
-  color: var(--normal-font-clr);
+  color: var(--input-hover-font-clr);
 }
 
 form .text {
@@ -626,10 +569,9 @@ form .text {
 }
 
 footer {
-  width: 90vw;
-  text-align: center;
-  margin-top: auto;
   font-size: clamp(1.3rem, 1.6rem, 2.5vw);
+  width: 100%;
+  text-align: center;
   color: var(--normal-font-clr);
 }
 
