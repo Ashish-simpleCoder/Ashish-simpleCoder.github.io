@@ -50,6 +50,7 @@ body {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   position: relative;
+  height: 100vh;
   background: var(--body-bg-clr);
 }
 
@@ -562,7 +563,7 @@ form label {
   text-align: left;
   margin-left: 10%;
   font-size: clamp(1.5rem, 1.8rem, 2.2vw);
-  color: var(--primay-clr);
+  color: var(--normal-font-clr);
 }
 
 form input {
@@ -627,7 +628,7 @@ form .text {
 footer {
   width: 90vw;
   text-align: center;
-  margin: 0 auto;
+  margin-top: auto;
   font-size: clamp(1.3rem, 1.6rem, 2.5vw);
   color: var(--normal-font-clr);
 }

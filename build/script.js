@@ -5,14 +5,14 @@ hamburger.addEventListener('click', () => AnimateElements());
 //     .addEventListener('click', () => AnimateElements());
 
 function AnimateElements() {
-    document.querySelector('nav').classList.toggle('active');
+    document.querySelector('nav ul').classList.toggle('active');
 
-    document.querySelectorAll('nav a').forEach((element, index) => {
+    document.querySelectorAll('nav li').forEach((element, index) => {
         if (element.style.animation) element.style.animation = '';
         else
-            element.style.animation = `linkAnimate ${
-                0.6 + index / 3
-            }s linear forwards`;
+            element.style.animation = `linkAnimate 0.5s ease forwards ${
+                index / 5 + 0.2
+            }s`;
     });
     // document.querySelector('.home-btn').classList.toggle('a-actives');
     hamburger.classList.toggle('animate');
